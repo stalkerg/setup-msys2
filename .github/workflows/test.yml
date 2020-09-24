@@ -99,7 +99,7 @@ jobs:
     - shell: msys2 {0}
       run: |
         uname -a
-        pacman -Syu --noconfirm
+        pacman -Syu --noconfirm --ignore=mintty
 
   msystem:
     strategy:
