@@ -48,7 +48,7 @@ async function run() {
     core.exportVariable('MSYSTEM', core.getInput('msystem'));
 
     core.startGroup('Starting MSYS2 for the first time...');
-      let pacmanCommand = (core.getInput('update') == 'true') ?  ['pacman', '-Syu', '--noconfirm', '--ignore=mintty'] : ['uname', '-a'];
+      let pacmanCommand = (core.getInput('update') == 'true') ?  ['pacman', '-Syu', '--noconfirm'] : ['uname', '-a'];
       await exec.exec('cmd', ['/D', '/S', '/C', cmd].concat(pacmanCommand));
     core.endGroup();
   }
