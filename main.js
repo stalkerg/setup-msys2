@@ -21,7 +21,7 @@ async function run() {
 
     await io.mkdirP(dest);
 
-    const msysURL = 'http://repo.msys2.org/distrib/x86_64/msys2-base-x86_64-20200903.tar.xz';
+    const msysURL = 'https://github.com/msys2/msys2-installer/releases/download/2020-09-03/msys2-base-x86_64-20200903.tar.xz';
     console.log(`Will download ${msysURL}`);
     const distrib = await tc.downloadTool(msysURL);
 
